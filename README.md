@@ -32,15 +32,9 @@ A full-stack application for monitoring plant species and healthy.
   
 ### Frontend Setup
 - cd frontend
-- npm install
 - npm start
 
 ### Backend Setup
 - cd backend
-- python -m venv venv
 - venv\Scripts\activate
-
-source venv/bin/activate  # Mac/Linux
-
-pip install -r requirements.txt
-python app.py
+- python smart-api-v2.py
