@@ -1,0 +1,280 @@
+.quiz-history-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  flex: 1;
+}
+
+
+.back-button-QH {
+  background: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.page-title-qh {
+  font-size: 2rem;
+  color: #2d5016;
+  margin-bottom: 2rem;
+}
+
+/* Statistics Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card-qh {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-icon-qh {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stat-icon-qh.plant {
+  background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%);
+}
+
+.stat-icon-qh.disease {
+  background: linear-gradient(135deg, #f44336 0%, #c62828 100%);
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value-qh {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d5016;
+}
+
+.stat-label-qh {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-tab {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.filter-tab:hover {
+  background: #f5f5f5;
+}
+
+.filter-tab.active {
+  background: #667eea;
+  color: white;
+}
+
+/* History List */
+.history-list {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-item:hover {
+  background: #f9f9f9;
+  transform: translateX(4px);
+}
+
+.quiz-type-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.quiz-type-badge.plant {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.quiz-type-badge.disease {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.history-content {
+  flex: 1;
+}
+
+.history-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d5016;
+  text-transform: capitalize;
+}
+
+.history-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.history-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-circle-qh {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.score-circle-qh.excellent {
+  background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%);
+}
+
+.score-circle-qh.good {
+  background: linear-gradient(135deg, #FFC107 0%, #F57C00 100%);
+}
+
+.score-circle-qh.fair {
+  background: linear-gradient(135deg, #f44336 0%, #c62828 100%);
+}
+
+.score-detail {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Empty State */
+.empty-state,
+.loading-state,
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.empty-icon {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  color: #2d5016;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  margin-bottom: 1.5rem;
+}
+
+.start-quiz-btn {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.start-quiz-btn:hover {
+  background: #5568d3;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .filter-tabs {
+    flex-direction: column;
+  }
+  
+  .history-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}

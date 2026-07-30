@@ -1,0 +1,133 @@
+.add-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-input-modal {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* ⭐ FIXED: Hide default select arrow */
+.form-select-modal {
+    width: 100%;
+    padding: 0.75rem;
+    padding-right: 2.5rem; /* Space for custom icon */
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    background-color: white;
+    
+    /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Hide default arrow in IE */
+.form-select-modal::-ms-expand {
+    display: none;
+}
+
+.form-input-modal:focus,
+.form-select-modal:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.input-wrapper-modal {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle-modal {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle-modal:hover {
+    color: #374151;
+}
+
+.select-wrapper-modal {
+    position: relative;
+}
+
+.select-icon-modal {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    pointer-events: none; /* Allow clicking through to select */
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.btn-cancel,
+.btn-submit {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-cancel {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.btn-cancel:hover:not(:disabled) {
+    background-color: #e5e7eb;
+}
+
+.btn-submit {
+    background-color: #22c55e;
+    color: white;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background-color: #16a34a;
+}
+
+.btn-cancel:disabled,
+.btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -1,0 +1,384 @@
+/* ==========================================
+   LEARNING MATERIAL MANAGEMENT PAGE
+   ========================================== */
+
+.admin-container-lm {
+    min-height: 100vh;
+}
+
+.content-wrapper-lm {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    background: linear-gradient(180deg, #f0fdf4 0%, #f8faf9 100%);
+}
+
+/* Tabs Navigation */
+.tabs-container-lm {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tab-button-lm {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-button-lm:hover {
+    background: #f3f4f6;
+}
+
+.tab-button-lm.active {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Page Header */
+.page-header-lm {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title-lm {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle-lm {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Create Material Button */
+.create-material-btn-lm {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: #bfdbfe;
+    color: #1e40af;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.create-material-btn-lm:hover {
+    background: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(147, 197, 253, 0.4);
+}
+
+/* Materials Grid */
+.materials-grid-lm {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 1.5rem;
+}
+
+.material-card-lm {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.material-card-lm:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Material Header */
+.material-header-lm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.material-title-lm {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.material-actions-lm {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.action-icon-btn-lm {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-icon-btn-lm.view {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.action-icon-btn-lm.view:hover {
+    background: #dbeafe;
+    transform: scale(1.05);
+}
+
+.action-icon-btn-lm.edit {
+    background: #f0fdf4;
+    color: #22c55e;
+}
+
+.action-icon-btn-lm.edit:hover {
+    background: #dcfce7;
+    transform: scale(1.05);
+}
+
+.action-icon-btn-lm.delete {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.action-icon-btn-lm.delete:hover {
+    background: #fee2e2;
+    transform: scale(1.05);
+}
+
+/* Material Badges */
+.material-badges-lm {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge-lm {
+    padding: 0.375rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Category Badges */
+.badge-lm.category.identification {
+    background: #bfdbfe;
+    color: #1e40af;
+}
+
+.badge-lm.category.disease {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+.badge-lm.category.anatomy {
+    background: #d9f99d;
+    color: #365314;
+}
+
+.badge-lm.category.ecology {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* Difficulty Badges */
+.badge-lm.difficulty.easy {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.badge-lm.difficulty.medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-lm.difficulty.hard {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* Material Footer */
+.material-footer-lm {
+    padding-top: 1.25rem;
+    border-top: 2px solid #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.created-date-lm {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* No Materials State */
+.no-materials-lm {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.no-materials-lm svg {
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.no-materials-lm h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+}
+
+.no-materials-lm p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0 0 1.5rem 0;
+}
+
+.create-first-material-btn-lm {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.create-first-material-btn-lm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Loading State */
+.loading-lm {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.25rem;
+    color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .materials-grid-lm {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper-lm {
+        padding: 1.5rem;
+    }
+
+    .tabs-container-lm {
+        flex-direction: column;
+    }
+
+    .page-header-lm {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .create-material-btn-lm {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .materials-grid-lm {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title-lm {
+        font-size: 1.5rem;
+    }
+
+    .material-card-lm {
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .material-title-lm {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper-lm {
+        padding: 1rem;
+    }
+
+    .page-header-lm {
+        padding: 1.5rem;
+    }
+
+    .material-card-lm {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .material-title-lm {
+        font-size: 1.125rem;
+    }
+
+    .material-badges-lm {
+        gap: 0.5rem;
+    }
+
+    .badge-lm {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
