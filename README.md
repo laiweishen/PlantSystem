@@ -35,6 +35,7 @@ A full-stack application for monitoring plant species and healthy.
 - npm start
 
 ### Backend Setup
-- cd backend
 - venv\Scripts\activate
+- cd backend
+- cd python-ai
 - python smart-api-v2.py
